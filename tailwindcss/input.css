@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    height: 96vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)), url(../images/clear.jpg);
+}
+
+.loader {
+    background-color: rgba(42, 109, 255, 0.377);
+    backdrop-filter: blur(10px);
+}
+.loader.hide {
+    animation: fadeOut .5s;
+    animation-fill-mode: forwards;
+}
+.loader.hide > i {
+    display: none;
+}
+
+@keyframes fadeOut {
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }   
+}
